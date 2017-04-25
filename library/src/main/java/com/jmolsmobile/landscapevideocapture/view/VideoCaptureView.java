@@ -27,7 +27,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.ImageView.ScaleType;
 import android.widget.TextView;
 
 import com.jmolsmobile.landscapevideocapture.R;
@@ -110,8 +109,8 @@ public class VideoCaptureView extends FrameLayout implements OnClickListener {
         mRecordBtnIv.setSelected(false);
         mChangeCameraIv.setVisibility(allowCameraSwitching() ? VISIBLE : INVISIBLE);
         mRecordBtnIv.setVisibility(View.VISIBLE);
-        mAcceptBtnIv.setVisibility(View.GONE);
-        mDeclineBtnIv.setVisibility(View.GONE);
+        //mAcceptBtnIv.setVisibility(View.GONE);
+        //mDeclineBtnIv.setVisibility(View.GONE);
         mThumbnailIv.setVisibility(View.GONE);
         mSurfaceView.setVisibility(View.VISIBLE);
     }
@@ -131,8 +130,8 @@ public class VideoCaptureView extends FrameLayout implements OnClickListener {
         mRecordBtnIv.setSelected(true);
         mRecordBtnIv.setVisibility(View.VISIBLE);
         mChangeCameraIv.setVisibility(View.INVISIBLE);
-        mAcceptBtnIv.setVisibility(View.GONE);
-        mDeclineBtnIv.setVisibility(View.GONE);
+        //mAcceptBtnIv.setVisibility(View.GONE);
+        //mDeclineBtnIv.setVisibility(View.GONE);
         mThumbnailIv.setVisibility(View.GONE);
         mSurfaceView.setVisibility(View.VISIBLE);
         if (mShowTimer) {
@@ -144,17 +143,17 @@ public class VideoCaptureView extends FrameLayout implements OnClickListener {
     }
 
     public void updateUIRecordingFinished(Bitmap videoThumbnail) {
-        mRecordBtnIv.setVisibility(View.INVISIBLE);
-        mAcceptBtnIv.setVisibility(View.VISIBLE);
-        mChangeCameraIv.setVisibility(View.INVISIBLE);
-        mDeclineBtnIv.setVisibility(View.VISIBLE);
-        mThumbnailIv.setVisibility(View.VISIBLE);
-        mSurfaceView.setVisibility(View.GONE);
+        //mRecordBtnIv.setVisibility(View.INVISIBLE);
+        //mAcceptBtnIv.setVisibility(View.VISIBLE);
+        //mChangeCameraIv.setVisibility(View.INVISIBLE);
+        //mDeclineBtnIv.setVisibility(View.VISIBLE);
+        //mThumbnailIv.setVisibility(View.VISIBLE);
+        //mSurfaceView.setVisibility(View.GONE);
 
-        if (videoThumbnail != null) {
+        /*if (videoThumbnail != null) {
             mThumbnailIv.setScaleType(ScaleType.CENTER_CROP);
             mThumbnailIv.setImageBitmap(videoThumbnail);
-        }
+        }*/
         customHandler.removeCallbacks(updateTimerThread);
 
     }

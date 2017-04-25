@@ -155,6 +155,7 @@ public class VideoCaptureActivity extends Activity implements RecordingButtonInt
 
         mVideoCaptureView.updateUIRecordingFinished(getVideoThumbnail());
         releaseAllResources();
+        finishCompleted();
     }
 
     @Override
